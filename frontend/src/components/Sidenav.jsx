@@ -24,7 +24,7 @@ const Sidenav = ({onAddTaskClick}) => {
                     disabled={isLoading}
                     onClick={onAddTaskClick}
                 >
-                    {isLoading ? <Loader className='w-6 h-6 animate-spin mx-auto'/>: "Add Task"}
+                    {isLoading ? <Loader className='w-6 h-6 animate-spin mx-auto'/>: "Add ToDo"}
                 </Motion.button>
             </li>
         </ul>

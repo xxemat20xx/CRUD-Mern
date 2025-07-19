@@ -1,6 +1,9 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Import the connectDB function
 const connectToDB = require('./database/connectDB');
@@ -8,8 +11,8 @@ const connectToDB = require('./database/connectDB');
 // Import routes
 const todoRoutes = require('./routes/todo.routes');
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+// CORS setup
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 // Middleware to parse JSON bodies
 app.use(express.json());

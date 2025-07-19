@@ -4,6 +4,7 @@ import Sidenav from './components/Sidenav'
 import Content from './components/Content'
 import { useState } from 'react'
 import Modal from './components/Modal'
+import AddTaskForm from './components/AddTaskForm'
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);  
@@ -23,7 +24,10 @@ function App() {
       <Sidenav onAddTaskClick={handleOpenModal}/>
       <Content />
 
-      {isModalOpen && <Modal onClose={handleCloseModal} />}
+      {isModalOpen && 
+        <Modal onClose={handleCloseModal}>
+            <AddTaskForm onClose={handleCloseModal} />
+        </Modal>}
     </Motion.div>
   )
 }
