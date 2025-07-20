@@ -63,13 +63,16 @@ A full-stack To-Do List application built using the **MERN stack (MongoDB, Expre
 git clone https://github.com/xxemat20xx/CRUD-Mern.git
 
 cd CRUD-Mern
+npm install
 
 Create a .env file in the root folder:
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 
 on the root file:
-npm run start
+npm run start 
+_Server is running on port 3000
+MongoDB connected successfully_
 
 Install the Frontend Dependencies:
 cd .\frontend
